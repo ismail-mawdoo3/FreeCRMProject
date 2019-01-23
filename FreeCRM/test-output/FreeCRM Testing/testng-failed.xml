@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [FreeCRM Testing]">
+  <parameter name="baseURL" value="https://www.freecrm.com/index.html"/>
+  <parameter name="Browser" value="chrome"/>
+  <test thread-count="5" name="Sign up profile(failed)">
+    <classes>
+      <class name="RegisterationANDLogin.SignUP">
+        <methods>
+          <include name="config"/>
+          <include name="tearDown"/>
+          <include name="signUp"/>
+        </methods>
+      </class> <!-- RegisterationANDLogin.SignUP -->
+    </classes>
+  </test> <!-- Sign up profile(failed) -->
+</suite> <!-- Failed suite [FreeCRM Testing] -->
