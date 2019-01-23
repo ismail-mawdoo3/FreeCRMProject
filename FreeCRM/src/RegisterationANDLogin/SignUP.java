@@ -23,10 +23,11 @@ public class SignUP extends Core {
 	By PassConfirmFieldLocator = By.name("passwordconfirm");
 	By AgreeCheckBoxlocator = By.name("agreeTerms");
 	By SubmitBtnLocator = By.id("submitButton");
+	By CompleteRegisteration = By.id("By.name(\"finish\")");
 
 	// Define variables
 	String RegisterUrlPage = "https://www.freecrm.com/register/";
-	String Email = "hala_"+ GenerateEmail(3)+"@mailinator.com";
+	String Email = "hala_" + GenerateEmail(3) + "@mailinator.com";
 	String UserName = "hala_" + GeneratUserName(3);
 	String Password = "123456789a";
 	String FName = "Hala";
@@ -59,9 +60,12 @@ public class SignUP extends Core {
 		// select agree checkbox then submit
 		waitElementToBeClickable(AgreeCheckBoxlocator).click();
 		waitElementToBeClickable(SubmitBtnLocator).click();
+		
+		//Fill company information
 		SignUpCompanyInfo();
-		waitElementToBeClickable(By.name("finish")).click();
-
+		
+		//Complete Registration
+		waitElementToBeClickable(CompleteRegisteration).click();
 	}
 
 	public void SignUpCompanyInfo() {
@@ -92,7 +96,6 @@ public class SignUP extends Core {
 	@AfterMethod
 	public void tearDownMethod() {
 		System.out.println("The registered username is " + UserName + " and Email is " + Email);
-
 	}
 
 }
