@@ -3,15 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [FreeCRM Testing]">
   <parameter name="baseURL" value="https://www.freecrm.com/index.html"/>
   <parameter name="Browser" value="chrome"/>
-  <test thread-count="5" name="Sign up profile(failed)">
+  <test thread-count="5" name="Login to User Profile(failed)">
     <classes>
-      <class name="RegisterationANDLogin.SignUP">
+      <class name="RegisterationANDLogin.Login">
         <methods>
+          <include name="loginUser"/>
           <include name="config"/>
           <include name="tearDown"/>
-          <include name="signUp"/>
         </methods>
-      </class> <!-- RegisterationANDLogin.SignUP -->
+      </class> <!-- RegisterationANDLogin.Login -->
     </classes>
-  </test> <!-- Sign up profile(failed) -->
+  </test> <!-- Login to User Profile(failed) -->
 </suite> <!-- Failed suite [FreeCRM Testing] -->

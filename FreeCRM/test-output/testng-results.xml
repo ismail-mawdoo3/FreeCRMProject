@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="FreeCRM Testing" duration-ms="49644" started-at="2019-01-23T13:37:22Z" finished-at="2019-01-23T13:38:12Z">
+  <suite name="FreeCRM Testing" duration-ms="36418" started-at="2019-01-24T15:00:31Z" finished-at="2019-01-24T15:01:07Z">
     <groups>
     </groups>
-    <test name="Sign up profile" duration-ms="49644" started-at="2019-01-23T13:37:22Z" finished-at="2019-01-23T13:38:12Z">
-      <class name="RegisterationANDLogin.SignUP">
-        <test-method status="PASS" signature="config(java.lang.String, java.lang.String)[pri:0, instance:RegisterationANDLogin.SignUP@5c3bd550]" name="config" is-config="true" duration-ms="26496" started-at="2019-01-23T13:37:22Z" finished-at="2019-01-23T13:37:49Z">
+    <test name="Login to User Profile" duration-ms="36418" started-at="2019-01-24T15:00:31Z" finished-at="2019-01-24T15:01:07Z">
+      <class name="RegisterationANDLogin.Login">
+        <test-method status="PASS" signature="config(java.lang.String, java.lang.String)[pri:0, instance:RegisterationANDLogin.Login@66a3ffec]" name="config" is-config="true" duration-ms="20924" started-at="2019-01-24T15:00:31Z" finished-at="2019-01-24T15:00:51Z">
           <params>
             <param index="0">
               <value>
@@ -23,23 +23,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- config -->
-        <test-method status="PASS" signature="setUpMethod()[pri:0, instance:RegisterationANDLogin.SignUP@5c3bd550]" name="setUpMethod" is-config="true" duration-ms="8824" started-at="2019-01-23T13:37:49Z" finished-at="2019-01-23T13:37:58Z">
+        <test-method status="PASS" signature="loginUser()[pri:0, instance:RegisterationANDLogin.Login@66a3ffec]" name="loginUser" duration-ms="15466" started-at="2019-01-24T15:00:51Z" finished-at="2019-01-24T15:01:07Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpMethod -->
-        <test-method status="PASS" signature="signUp()[pri:0, instance:RegisterationANDLogin.SignUP@5c3bd550]" name="signUp" duration-ms="14248" started-at="2019-01-23T13:37:58Z" finished-at="2019-01-23T13:38:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- signUp -->
-        <test-method status="PASS" signature="tearDownMethod()[pri:0, instance:RegisterationANDLogin.SignUP@5c3bd550]" name="tearDownMethod" is-config="true" duration-ms="1" started-at="2019-01-23T13:38:12Z" finished-at="2019-01-23T13:38:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownMethod -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:RegisterationANDLogin.SignUP@5c3bd550]" name="tearDown" is-config="true" duration-ms="0" started-at="2019-01-23T13:38:12Z" finished-at="2019-01-23T13:38:12Z">
+        </test-method> <!-- loginUser -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:RegisterationANDLogin.Login@66a3ffec]" name="tearDown" is-config="true" duration-ms="1" started-at="2019-01-24T15:01:07Z" finished-at="2019-01-24T15:01:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- RegisterationANDLogin.SignUP -->
-    </test> <!-- Sign up profile -->
+      </class> <!-- RegisterationANDLogin.Login -->
+    </test> <!-- Login to User Profile -->
   </suite> <!-- FreeCRM Testing -->
 </testng-results>

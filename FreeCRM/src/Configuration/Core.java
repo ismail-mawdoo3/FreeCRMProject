@@ -17,6 +17,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class Core extends ConfigClass {
+	//Define global variables
+	public static String screenShotPath="";
+
 
 	public WebElement waitElementToBeClickable(By by) {
 		return wait.until(ExpectedConditions.elementToBeClickable(by));
@@ -41,24 +44,25 @@ public class Core extends ConfigClass {
 		String NumberPart = RandomStringUtils.random(length, true, true);
 		return NumberPart;
 	}
-	
-	
-public void takeScreenShot(String path) {
-	File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-	// Now you can do whatever you need to do with it, for example copy somewhere
-	try {
-		FileUtils.copyFile(scrFile, new File(path));
-	} catch (IOException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
+
+	public void takeScreenShot(String path) {
+	   path = "c:\\file\\screenshot_" + getCurrentTime() +"_"+ driver.getTitle() + ".png";
+		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		// Now you can do whatever you need to do with it, for example copy somewhere
+		try {
+			FileUtils.copyFile(scrFile, new File(path));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
-}
-public String  getCurrentTime(){
-    Date date = new Date();
-    String dateTimeformat="hh_mm_ss_a";
-    DateFormat dateFormat = new SimpleDateFormat(dateTimeformat);
-    String formattedDate= dateFormat.format(date);
-	return formattedDate;
-}
+
+	public  String getCurrentTime() {
+		Date date = new Date();
+		String dateTimeformat = "hh_mm_ss_a";
+		DateFormat dateFormat = new SimpleDateFormat(dateTimeformat);
+		String formattedDate = dateFormat.format(date);
+		return formattedDate;
+	}
 
 }

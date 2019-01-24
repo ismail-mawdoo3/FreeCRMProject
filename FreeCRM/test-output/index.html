@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-FreeCRM_Testing">
-                    <span>C:\Users\Hala Daboush\eclipse-workspace\FreeCRM\FreeCRM_testngScripts\testngTC.xml</span>
+                    <span>C:\Users\Hala Daboush\git\FreeCRMProject\FreeCRM\FreeCRM_testngScripts\Login_TC.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -102,7 +102,7 @@
                     <div class="method-list-content passed suite-FreeCRM_Testing">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-FreeCRM_Testing" title="RegisterationANDLogin.SignUP" hash-for-method="signUp">signUp</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-FreeCRM_Testing" title="RegisterationANDLogin.Login" hash-for-method="loginUser">loginUser</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-FreeCRM_Testing -->
@@ -120,14 +120,14 @@
           <div class="suite-FreeCRM_Testing-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">RegisterationANDLogin.SignUP</span>
+              <span class="class-name">RegisterationANDLogin.Login</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="signUp">
-                  </a> <!-- signUp -->
-                  <span class="method-name">signUp</span>
+                  <a name="loginUser">
+                  </a> <!-- loginUser -->
+                  <span class="method-name">loginUser</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -135,7 +135,7 @@
         </div> <!-- panel FreeCRM_Testing -->
         <div panel-name="test-xml-FreeCRM_Testing" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Hala Daboush\eclipse-workspace\FreeCRM\FreeCRM_testngScripts\testngTC.xml</span>
+            <span class="header-content">C:\Users\Hala Daboush\git\FreeCRMProject\FreeCRM\FreeCRM_testngScripts\Login_TC.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -144,15 +144,15 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;FreeCRM Testing&quot;&gt;
   &lt;parameter name=&quot;baseURL&quot; value=&quot;https://www.freecrm.com/index.html&quot;/&gt;
   &lt;parameter name=&quot;Browser&quot; value=&quot;chrome&quot;/&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Sign up profile&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Login to User Profile&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;RegisterationANDLogin.SignUP&quot;&gt;
+      &lt;class name=&quot;RegisterationANDLogin.Login&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;signUp&quot;/&gt;
+          &lt;include name=&quot;loginUser&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- RegisterationANDLogin.SignUP --&gt;
+      &lt;/class&gt; &lt;!-- RegisterationANDLogin.Login --&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Sign up profile --&gt;
+  &lt;/test&gt; &lt;!-- Login to User Profile --&gt;
 &lt;/suite&gt; &lt;!-- FreeCRM Testing --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -164,7 +164,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Sign up profile (1 class)</span>
+                <span class="test-name">Login to User Profile (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -192,14 +192,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'signUp')
-data.setCell(0, 2, 'RegisterationANDLogin.SignUP')
-data.setCell(0, 3, 14248);
+data.setCell(0, 1, 'loginUser')
+data.setCell(0, 2, 'RegisterationANDLogin.Login')
+data.setCell(0, 3, 15466);
 window.suiteTableData['FreeCRM_Testing']= { tableData: data, tableDiv: 'times-div-FreeCRM_Testing'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 14 seconds</span>
+              <span class="suite-total-time">Total running time: 15 seconds</span>
               <div id="times-div-FreeCRM_Testing">
               </div> <!-- times-div-FreeCRM_Testing -->
             </div> <!-- times-div -->
@@ -225,26 +225,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">RegisterationANDLogin.SignUP</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">RegisterationANDLogin.Login</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">config(https://www.freecrm.com/index.html, chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
-              <div class="configuration-method before">
-                <span class="method-name">setUpMethod</span>
-                <span class="method-start">26565 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">signUp</span>
-                <span class="method-start">35389 ms</span>
+                <span class="method-name">loginUser</span>
+                <span class="method-start">20936 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDownMethod</span>
-                <span class="method-start">49639 ms</span>
-              </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">49641 ms</span>
+                <span class="method-start">36410 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

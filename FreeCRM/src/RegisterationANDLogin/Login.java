@@ -34,11 +34,8 @@ public class Login extends Core {
 		sendKeysToElement("123456789a", PassLoginPageLocator);
 
 		// click - Submit
-
 		waitElementToBeClickable(LoginBtnLocator).click();
-		
-	
-		String screenShotPath="c:\\file\\screenshot_"+ getCurrentTime()+".png";
+
 		// Take Screenshot
 		takeScreenShot(screenShotPath);
 
