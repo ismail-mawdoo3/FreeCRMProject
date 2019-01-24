@@ -17,7 +17,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class ConfigClass {
 	// Define global variables and objects
 	public WebDriver driver = null;
-	public WebDriverWait wait=null;
+	public WebDriverWait wait = null;
 	public static String baseURL = "";
 	public static String Browser = "";
 
@@ -41,24 +41,21 @@ public class ConfigClass {
 			break;
 		}
 
-		default:
-			{WebDriverManager.iedriver().setup();
+		default: {
+			WebDriverManager.iedriver().setup();
 			driver = new InternetExplorerDriver();
-			break;}
-			
+			break;
+		}
 		}
 		driver.navigate().to(baseURL);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		driver.manage().deleteAllCookies();
-		wait =new WebDriverWait(driver, 6);
-		
-
+		wait = new WebDriverWait(driver, 6);
 	}
-	
+
 	@AfterTest
 	public void tearDown() {
 		System.out.println("end");
-		}
-
+	}
 }

@@ -1,14 +1,6 @@
 package RegisterationANDLogin;
 
-import java.io.File;
-import java.io.IOException;
-
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.remote.ScreenshotException;
-import org.openqa.selenium.remote.server.handler.FindElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -22,10 +14,10 @@ public class Login extends Core {
 	By UsernameLoginPageLocator = By.name("username");
 	By PassLoginPageLocator = By.name("password");
 	By LoginBtnLocator = By.xpath("//input[@value='Login']");
+	By LogoutLinkLocator = By.xpath("//*[contains(@href,'logout')]");
 
 	@Test
 	public void loginUser() {
-
 		// Make sure you are on Login page
 		Assert.assertEquals(driver.getCurrentUrl(), HomePageURL, "You are not on Home Page");
 
@@ -36,9 +28,9 @@ public class Login extends Core {
 		// click - Submit
 		waitElementToBeClickable(LoginBtnLocator).click();
 
-		// Take Screenshot
+		// Evidence by 1.take Screenshot 2.existence of logout link
 		takeScreenShot(screenShotPath);
-
+		waitElementToBeVisible(LogoutLinkLocator);
 	}
 
 }

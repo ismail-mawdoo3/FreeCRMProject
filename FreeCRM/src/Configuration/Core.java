@@ -4,10 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
 import java.util.Date;
-
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
@@ -17,9 +14,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class Core extends ConfigClass {
-	//Define global variables
-	public static String screenShotPath="";
-
+	// Define global variables
+	public static String screenShotPath = "";
 
 	public WebElement waitElementToBeClickable(By by) {
 		return wait.until(ExpectedConditions.elementToBeClickable(by));
@@ -46,18 +42,17 @@ public class Core extends ConfigClass {
 	}
 
 	public void takeScreenShot(String path) {
-	   path = "c:\\file\\screenshot_" + getCurrentTime() +"_"+ driver.getTitle() + ".png";
+		path = "c:\\file\\screenshot_" + getCurrentTime() + "_" + driver.getTitle() + ".png";
 		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		// Now you can do whatever you need to do with it, for example copy somewhere
 		try {
 			FileUtils.copyFile(scrFile, new File(path));
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println("screenshot is faild , check this message " + e.getMessage());
 		}
 	}
 
-	public  String getCurrentTime() {
+	public String getCurrentTime() {
 		Date date = new Date();
 		String dateTimeformat = "hh_mm_ss_a";
 		DateFormat dateFormat = new SimpleDateFormat(dateTimeformat);
