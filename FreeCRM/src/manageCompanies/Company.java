@@ -16,10 +16,10 @@ public class Company extends ConfigClass {
 	public void addCompany() {
 		
 		System.out.println(driver.getCurrentUrl());						
-		/*	WebElement CompanyLinkElement=driver.findElement(CompanyLinkLocator);
+			WebElement CompanyLinkElement=driver.findElement(CompanyLinkLocator);
 			System.out.println("company 44 ");
 			Actions actions=new Actions(driver);
-			actions.moveToElement(CompanyLinkElement).build().perform();*/
+			actions.moveToElement(CompanyLinkElement).build().perform();
 				
 	}
 }
