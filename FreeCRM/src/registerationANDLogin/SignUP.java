@@ -1,4 +1,4 @@
-package RegisterationANDLogin;
+package registerationANDLogin;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -7,9 +7,10 @@ import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import Configuration.Core;
 
-public class SignUP extends Core {
+import configuration.Core;
+
+public class SignUP extends Core{
 	Core core = new Core();
 
 	// Define By Locators

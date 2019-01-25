@@ -4,11 +4,16 @@
 	<parameter name="baseURL"
 		value="https://www.freecrm.com/index.html" />
 	<parameter name="Browser" value="chrome" />
-	<test name="Login to User Profile">
+	<test name="Companies testing">
 		<classes>
 			<class name="registerationANDLogin.Login">
 				<methods>
 					<include name="loginUser" />
+				</methods>
+			</class>
+			<class name="manageCompanies.Company">
+				<methods>
+					<include name="addCompany" />
 				</methods>
 			</class>
 		</classes>

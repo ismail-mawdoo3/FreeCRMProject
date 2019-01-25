@@ -1,10 +1,9 @@
-package RegisterationANDLogin;
+package registerationANDLogin;
 
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import Configuration.Core;
+import configuration.Core;
 
 public class Login extends Core {
 	// Define global variables
@@ -18,6 +17,9 @@ public class Login extends Core {
 
 	@Test
 	public void loginUser() {
+		
+		//
+		String MainFrame="mainpanel";
 		// Make sure you are on Login page
 		Assert.assertEquals(driver.getCurrentUrl(), HomePageURL, "You are not on Home Page");
 
@@ -30,6 +32,7 @@ public class Login extends Core {
 
 		// Evidence by 1.take Screenshot 2.existence of logout link
 		takeScreenShot(screenShotPath);
+		driver.switchTo().frame(MainFrame);
 		waitElementToBeVisible(LogoutLinkLocator);
 	}
 
